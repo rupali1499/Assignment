@@ -38,7 +38,7 @@ const ToDoList = () => {
     e.preventDefault();
     // find index of element
     let temp = taskList;
-    const element = temp.findIndex((elem) => elem.id == id);
+    const element = temp.findIndex((elem) => elem.id === id);
     temp[element] = {
       ...temp[element],
       isCompleted: !temp[element].isCompleted,
@@ -51,7 +51,7 @@ const ToDoList = () => {
   const editTask = (e, id) => {
     e.preventDefault();
     let temp = taskList;
-    const element = temp.findIndex((elem) => elem.id == id);
+    const element = temp.findIndex((elem) => elem.id === id);
     temp[element] = {
       ...temp[element],
       isEdit: true,
@@ -65,7 +65,7 @@ const ToDoList = () => {
     e.preventDefault();
 
     let temp = taskList;
-    const element = temp.findIndex((elem) => elem.id == id);
+    const element = temp.findIndex((elem) => elem.id === id);
     temp[element] = {
       ...temp[element],
       isEdit: true,
@@ -79,7 +79,7 @@ const ToDoList = () => {
     e.preventDefault();
 
     let temp = taskList;
-    const element = temp.findIndex((elem) => elem.id == id);
+    const element = temp.findIndex((elem) => elem.id === id);
     temp[element] = {
       ...temp[element],
       isEdit: false,
@@ -96,7 +96,7 @@ const ToDoList = () => {
 
   const deletetask = (e, id) => {
     e.preventDefault();
-    const newList = taskList.filter((t) => t.id != id);
+    const newList = taskList.filter((t) => t.id !== id);
     setTaskList(newList);
     setInLocalStorage(newList);
   };
