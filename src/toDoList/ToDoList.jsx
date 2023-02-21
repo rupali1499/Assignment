@@ -27,6 +27,7 @@ const ToDoList = () => {
         isCompleted: false,
         isEdit: false,
       };
+
       ref.current.value = "";
       setTaskList([...taskList, taskDetails]);
       setInLocalStorage([...taskList, taskDetails]);
