@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
 import styles from "./toDo.module.css";
 import { v4 as uuidv4 } from "uuid";
